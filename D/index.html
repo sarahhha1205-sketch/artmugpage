@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="원화, 일러스트, 디자인, 서브컬처 아트 포트폴리오">
+  <title>ARTPORT — Art Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>">
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#hero" class="logo">ART<span>PORT</span></a>
+      <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#gallery">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#process">Process</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content container">
+      <p class="hero-label" data-animate>Visual Artist & Illustrator</p>
+      <h1 class="hero-title" data-animate>
+        <span class="hero-line">그림으로</span>
+        <span class="hero-line hero-line--accent">이야기를 그리다</span>
+      </h1>
+      <p class="hero-desc" data-animate>
+        원화 · 일러스트 · 캐릭터 디자인<br>
+        일러스트와 디자인 작업을 전반적으로 수행합니다.
+      </p>
+      <div class="hero-actions" data-animate>
+        <a href="#gallery" class="btn btn-primary">작품 보기</a>
+        <a href="#contact" class="btn btn-outline">Connect</a>
+      </div>
+      <div class="hero-scroll" data-animate>
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </div>
+    <div class="hero-showcase">
+      <div class="hero-showcase-track">
+        <div class="hero-showcase-item" style="--hue: 320"></div>
+        <div class="hero-showcase-item" style="--hue: 200"></div>
+        <div class="hero-showcase-item" style="--hue: 45"></div>
+        <div class="hero-showcase-item" style="--hue: 280"></div>
+        <div class="hero-showcase-item" style="--hue: 160"></div>
+        <!-- duplicate for seamless loop -->
+        <div class="hero-showcase-item" style="--hue: 320"></div>
+        <div class="hero-showcase-item" style="--hue: 200"></div>
+        <div class="hero-showcase-item" style="--hue: 45"></div>
+        <div class="hero-showcase-item" style="--hue: 280"></div>
+        <div class="hero-showcase-item" style="--hue: 160"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Selected Works</h2>
+        <p class="section-desc">작업물 모음입니다. 이미지를 클릭하면 상세 정보를 볼 수 있습니다.</p>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section" id="contact">
+    <div class="container contact-connect">
+      <span class="section-label">Contact</span>
+      <h2 class="connect-title">Connect me</h2>
+      <div class="sns-links">
+        <a href="https://www.instagram.com/" class="sns-link" target="_blank" rel="noopener noreferrer" aria-label="작가의 인스타그램 페이지로 이동하기" data-tooltip="작가의 인스타그램 페이지로 이동하기">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.pixiv.net/" class="sns-link" target="_blank" rel="noopener noreferrer" aria-label="작가의 픽시브 페이지로 이동하기" data-tooltip="작가의 픽시브 페이지로 이동하기">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.935 0A4.924 4.924 0 0 0 0 4.935v14.13A4.924 4.924 0 0 0 4.935 24h14.13A4.924 4.924 0 0 0 24 19.065V4.935A4.924 4.924 0 0 0 19.065 0zm7.81 4.547c2.993 0 4.756 1.567 4.756 4.547 0 2.806-1.567 4.547-4.756 4.547-1.298 0-2.458-.388-3.215-1.034v4.342h-3.215V4.935h3.215v1.033c.757-.646 1.917-1.034 3.215-1.034zm-3.215 6.78c.518.453 1.298.711 2.199.711 1.567 0 2.458-.969 2.458-2.674 0-1.705-.891-2.674-2.458-2.674-.901 0-1.681.258-2.199.711v3.926z"/></svg>
+        </a>
+        <a href="https://x.com/" class="sns-link" target="_blank" rel="noopener noreferrer" aria-label="작가의 X 페이지로 이동하기" data-tooltip="작가의 X 페이지로 이동하기">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container about-content">
+      <span class="section-label">About</span>
+      <h2 class="section-title">안녕하세요,<br>아티스트입니다.</h2>
+      <div class="about-text">
+        <p>
+          디지털과 아날로그를 넘나들며, 캐릭터·풍경·컨셉 아트를 중심으로 작업합니다.
+          일러스트레이션부터 원화, 캐릭터 디자인, 서브컬처 아트까지 다양한 매체로
+          세계관과 감정을 표현하는 것을 좋아합니다.
+        </p>
+        <p>
+          클라이언트의 비전을 함께 구체화하고, 커미션·일러스트·캐릭터 디자인·
+          굿즈 아트 등 맞춤 작업을 진행합니다.
+        </p>
+      </div>
+      <ul class="about-skills">
+        <li>캐릭터 디자인</li>
+        <li>컨셉 아트</li>
+        <li>서브컬처 / 팬아트</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-label">Process</span>
+        <h2 class="section-title">Creative Process</h2>
+      </div>
+      <div class="process-steps">
+        <article class="process-step">
+          <span class="process-num">01</span>
+          <h3>기획 & 스케치</h3>
+          <p>세부 설명을 적는 공간입니다.</p>
+        </article>
+        <article class="process-step">
+          <span class="process-num">02</span>
+          <h3>라인 & 구도</h3>
+          <p>세부 설명을 적는 공간입니다.</p>
+        </article>
+        <article class="process-step">
+          <span class="process-num">03</span>
+          <h3>채색 & 렌더링</h3>
+          <p>세부 설명을 적는 공간입니다.</p>
+        </article>
+        <article class="process-step">
+          <span class="process-num">04</span>
+          <h3>마무리 & 전달</h3>
+          <p>세부 설명을 적는 공간입니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="logo">ART<span>PORT</span></a>
+      <p>&copy; 2026 ARTPORT. All artwork rights reserved.</p>
+      <a href="#contact" class="footer-link">Get in touch</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="작품 상세">
+    <button class="lightbox-close" aria-label="닫기">&times;</button>
+    <button class="lightbox-prev" aria-label="이전">&larr;</button>
+    <button class="lightbox-next" aria-label="다음">&rarr;</button>
+    <div class="lightbox-content">
+      <div class="lightbox-image" id="lightbox-image"></div>
+      <div class="lightbox-info">
+        <span class="lightbox-category" id="lightbox-category"></span>
+        <h3 class="lightbox-title" id="lightbox-title"></h3>
+        <p class="lightbox-desc" id="lightbox-desc"></p>
+        <div class="lightbox-meta">
+          <span id="lightbox-year"></span>
+          <span id="lightbox-medium"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/artworks.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Netlify 설정 — 아트머그 iframe 임베드 허용
+[build]
+  publish = "."
+
+[functions]
+  directory = "functions"
+
+[[headers]]
+  for = "/work-schedule.json"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
