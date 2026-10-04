@@ -246,16 +246,16 @@
     .order-section-title { margin: 0; font-size: 14px; font-weight: 800; color: #111; }
     .order-list { display: flex; flex-direction: column; gap: 8px; }
     .order-item {
-      display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+      display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px;
       border: 1px solid #ddd; border-radius: 10px; background: #fff; cursor: pointer; transition: 0.15s;
     }
     .order-item:hover { border-color: #999; }
     .order-item:has(input:checked) { border-color: #111; background: #f5f5f5; }
-    .order-item input { flex-shrink: 0; width: 16px; height: 16px; cursor: pointer; accent-color: #111; }
-    .order-item-info { flex: 1; min-width: 0; }
+    .order-item input { flex-shrink: 0; width: 16px; height: 16px; margin-top: 2px; cursor: pointer; accent-color: #111; }
+    .order-item-info { flex: 1; min-width: 0; align-self: center; }
     .order-item-name { display: block; font-size: 13px; font-weight: 700; color: #111; }
     .order-item-desc { display: block; margin-top: 2px; font-size: 11px; color: #888; line-height: 1.45; }
-    .order-item-price { flex-shrink: 0; font-size: 13px; font-weight: 800; color: #111; white-space: nowrap; }
+    .order-item-price { flex-shrink: 0; align-self: center; font-size: 13px; font-weight: 800; color: #111; white-space: nowrap; }
     .order-item-wrap { border: 1px solid #ddd; border-radius: 10px; background: #fff; overflow: hidden; transition: 0.15s; }
     .order-item-wrap.active { border-color: #111; background: #f5f5f5; }
     .order-item-wrap .order-item { border: none; border-radius: 0; background: transparent; }
@@ -396,6 +396,21 @@
       border: 1px solid #111; transition: transform 0.15s ease, background 0.15s ease;
       white-space: nowrap;
     }
+    .artist-group-title { font-size: 18px; font-weight: 900; margin: 32px 0 0; color: #111; }
+    .artist-list { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+    .artist-card {
+      display: flex; align-items: center; gap: 24px; padding: 20px 28px; border-radius: 28px;
+      background: #fff; border: 1px solid rgba(0,0,0,0.08); color: #111; text-decoration: none;
+      box-shadow: 0 6px 20px rgba(120,80,160,0.08); transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .artist-card:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(120,80,160,0.16); }
+    .artist-avatar {
+      width: 80px; height: 80px; border-radius: 50%; overflow: hidden; flex-shrink: 0;
+      background: #f3eefb; border: 3px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .artist-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .artist-name { font-size: 16px; font-weight: 800; }
     .tpl-real-btn:hover { background: #333; transform: translateY(-2px); }
     .tpl-real-btn::after { content: '↗'; font-weight: 900; }
     @media (max-width: 640px) { .tpl-real-btn { flex: 1 1 100%; } }
@@ -1824,12 +1839,34 @@
       </div>
     </div>
 
-      <p class="lead" style="margin-top:20px;">실제로 제작해 드린 작업물입니다. 버튼을 누르면 새 창에서 바로 확인할 수 있어요.</p>
-      <div class="tpl-real-row">
-      <a class="tpl-real-btn" href="https://dwed72136-gif.github.io/404/" target="_blank" rel="noopener">사이트 제작 예시</a>
-      <a class="tpl-real-btn" href="https://artmug.kr/index.php?channel=view&uid=60375" target="_blank" rel="noopener">고정틀 실제 작업 예시</a>
-      <a class="tpl-real-btn" href="https://artmug.kr/index.php?channel=view&uid=49433" target="_blank" rel="noopener">오마카세 실제 작업 예시</a>
-    </div>
+      <p class="lead" style="margin-top:20px;">실제로 제작해 드린 작업물입니다. 카드를 누르면 새 창에서 바로 확인할 수 있어요.</p>
+
+      <!-- 카드 추가: <a class="artist-card"> 블록을 복사해 href / 이미지 / 이름만 바꾸세요. 이미지 없으면 <img> 줄 삭제 -->
+      <h4 class="artist-group-title">사이트 포트폴리오</h4>
+      <div class="artist-list">
+        <a class="artist-card" href="https://dwed72136-gif.github.io/404/" target="_blank" rel="noopener">
+          <span class="artist-avatar"><img src="assets/artists/404.png" alt=""></span>
+          <span class="artist-name">404 덩기덕님 팬 사이트</span>
+        </a>
+      </div>
+      <h4 class="artist-group-title">고정틀 포트폴리오</h4>
+      <div class="artist-list">
+        <a class="artist-card" href="https://artmug.kr/index.php?channel=view&uid=60375" target="_blank" rel="noopener">
+          <span class="artist-avatar"><img src="assets/artists/60375.jpg" alt=""></span>
+          <span class="artist-name">푸우리 작가님</span>
+        </a>
+      </div>
+      <h4 class="artist-group-title">오마카세 포트폴리오</h4>
+      <div class="artist-list">
+        <a class="artist-card" href="https://artmug.kr/index.php?channel=view&uid=49433" target="_blank" rel="noopener">
+          <span class="artist-avatar"><img src="assets/artists/49433.jpg" alt=""></span>
+          <span class="artist-name">유별나 작가님</span>
+        </a>
+        <a class="artist-card" href="https://artmug.kr/index.php?channel=view&uid=59970" target="_blank" rel="noopener">
+          <span class="artist-avatar"><img src="assets/artists/59970.jpg" alt=""></span>
+          <span class="artist-name">보늬 작가님</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1983,6 +2020,7 @@
           </div>
           <label class="order-item"><input type="checkbox" class="order-check" data-name="폰트 변경" data-price="0"><span class="order-item-info"><span class="order-item-name">폰트 변경</span><span class="order-item-desc">원하는 무료 폰트로 변경해 드립니다.</span></span><span class="order-item-price">0원</span></label>
           <label class="order-item"><input type="checkbox" class="order-check" data-name="빠른 마감" data-price="20000"><span class="order-item-info"><span class="order-item-name">빠른 마감</span><span class="order-item-desc">30시간 안에 작업을 완료합니다.</span></span><span class="order-item-price">+20,000원</span></label>
+          <label class="order-item"><input type="checkbox" class="order-check" data-name="수정 페이지" data-price="20000"><span class="order-item-info"><span class="order-item-name">수정 페이지</span><span class="order-item-desc">쉽게 수정할 수 있는 페이지를 연동해 드립니다</span></span><span class="order-item-price">+20,000원</span></label>
         </div>
       </section>
 
